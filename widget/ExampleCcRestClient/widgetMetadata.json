@@ -1,0 +1,19 @@
+{
+  "config": {
+    "exampleStringProperty": "Example String Property Value",
+    "exampleOptionProperty": "option1",
+    "exampleBooleanProperty": true
+  },
+  "imports": [
+    "product"
+  ],
+  "minWidth": 1,
+  "availableToAllPages": true,
+  "jsEditable": true,
+  "translations": [
+    {
+      "language": "en",
+      "name": "ExampleCcRestClient"
+    }
+  ]
+}

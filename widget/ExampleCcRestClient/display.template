@@ -1,0 +1,38 @@
+<div class="exampleccrestclient">
+  <!--
+   Localized resource values can be accessed as follows:
+  -->
+  <h1>Example with ccRestClient</h1>
+  <span
+    data-bind="widgetLocaleText : {value:'exampleResourceKey', attr:'innerText', params:{}}"
+  ></span>
+
+  NB Result:
+  <span class="text-danger" role="alert" data-bind="text: debugVar"></span>
+
+  <h2>Product list</h2>
+
+  <!-- ko foreach: items -->
+  <div class="product-item">
+    <img
+      data-bind="ccResizeImage: {
+      source: $data.primarySourceImageURL,
+      xsmall: '150,150',
+      medium: '600,600',
+      size:'150,150',
+      alt: $data.displayName,
+      errorSrc:'images/noImage.png',
+      errorAlt:'No Image Found'}"
+    />
+    <div>
+      <small data-bind="text: $data.description"></small>
+      <h3 data-bind="text:$data.displayName"></h3>
+      Category :
+      <span data-bind="text: $data.parentCategory.repositoryId"></span>
+    </div>
+    <p data-bind="text: $data.creationDate"></p>
+    <a data-bind="ccLink: $data">Go to product</a>
+  </div>
+
+  <!-- /ko -->
+</div>
